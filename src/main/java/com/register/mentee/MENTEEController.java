@@ -20,7 +20,7 @@ public class MENTEEController {
         this.menteeService = menteeService;
     }
 
-    @PostMapping("/creatementee")
+    @PostMapping("/addmentee")
     public String createMENTEE(@RequestBody mentee mentee)
             throws InterruptedException, ExecutionError, ExecutionException {
         return menteeService.createMENTEE(mentee, mentee.getMentee_phone());
