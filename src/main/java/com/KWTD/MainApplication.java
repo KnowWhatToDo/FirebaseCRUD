@@ -1,4 +1,4 @@
-package com.register;
+package com.KWTD;
 
 import java.io.File;
 import java.io.FileInputStream;

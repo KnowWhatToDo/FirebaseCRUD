@@ -1,4 +1,4 @@
-package com.register.mentee;
+package com.KWTD.register.mentee;
 
 import lombok.Getter;
 import lombok.Setter;

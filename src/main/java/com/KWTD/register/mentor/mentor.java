@@ -1,4 +1,4 @@
-package com.register.mentor;
+package com.KWTD.register.mentor;
 
 import lombok.Getter;
 import lombok.Setter;

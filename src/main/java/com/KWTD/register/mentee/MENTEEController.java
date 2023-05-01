@@ -1,4 +1,4 @@
-package com.register.mentee;
+package com.KWTD.register.mentee;
 
 import java.util.concurrent.ExecutionException;
 
