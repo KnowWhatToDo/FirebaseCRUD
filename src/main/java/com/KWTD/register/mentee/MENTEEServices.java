@@ -18,12 +18,10 @@ import com.google.cloud.firestore.WriteResult;
 import com.google.firebase.cloud.FirestoreClient;
 
 @Service
-public class MENTEEServices {
+public class MenteeServices {
     Firestore dbFirestore = FirestoreClient.getFirestore();
 
     public String createMENTEE(mentee mentee, String phone) throws InterruptedException, ExecutionException {
-        System.out.println("====================================\n" + UUID.randomUUID()
-                + "\n====================================");
 
         List<String> mentorUIDs = getMentorUIDs();
         System.out.println(mentorUIDs);

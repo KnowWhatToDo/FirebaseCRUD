@@ -17,9 +17,8 @@ public class Experience {
     private String endDate;
     private long experience;
 
-    // Default constructor
     public Experience() {
-        this.experience = 0;
+        // Default constructor
     }
 
     public Experience(String companyName, String startDate, String endDate) {

@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.google.common.util.concurrent.ExecutionError;
 
 @RestController
-public class MENTORController {
+public class MentorController {
 
-    public MENTORService mentorService;
+    public MentorService mentorService;
 
-    public MENTORController(MENTORService mentorService) {
+    public MentorController(MentorService mentorService) {
         this.mentorService = mentorService;
     }
 

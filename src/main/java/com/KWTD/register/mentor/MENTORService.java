@@ -15,15 +15,12 @@ import com.google.cloud.firestore.WriteResult;
 import com.google.firebase.cloud.FirestoreClient;
 
 @Service
-public class MENTORService {
+public class MentorService {
 
     Firestore dbFirestore = FirestoreClient.getFirestore();
 
     public String createMENTOR(mentor mentor, String phone) throws InterruptedException, ExecutionException {
-        System.out.println(
-                "====================================\n" + UUID.randomUUID()
-                        + "\n====================================");
-
+        
         ApiFuture<WriteResult> collectionsApiFuture = dbFirestore.collection("mentor_user").document(phone)
                 .set(mentor);
         return collectionsApiFuture.get().getUpdateTime().toString();

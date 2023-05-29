@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.google.common.util.concurrent.ExecutionError;
 
 @RestController
-public class MENTEEController {
-    public MENTEEServices menteeService;
+public class MenteeController {
+    public MenteeServices menteeService;
 
-    public MENTEEController(MENTEEServices menteeService) {
+    public MenteeController(MenteeServices menteeService) {
         this.menteeService = menteeService;
     }
 
