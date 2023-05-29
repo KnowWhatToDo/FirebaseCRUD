@@ -3,6 +3,9 @@ package com.KWTD.register.mentor;
 import java.util.concurrent.ExecutionException;
 import java.util.UUID;
 import org.springframework.stereotype.Service;
+import java.time.ZoneId;
+import java.util.Date;
+import java.time.LocalDate;
 
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.DocumentReference;
@@ -20,6 +23,7 @@ public class MENTORService {
         System.out.println(
                 "====================================\n" + UUID.randomUUID()
                         + "\n====================================");
+
         ApiFuture<WriteResult> collectionsApiFuture = dbFirestore.collection("mentor_user").document(phone)
                 .set(mentor);
         return collectionsApiFuture.get().getUpdateTime().toString();

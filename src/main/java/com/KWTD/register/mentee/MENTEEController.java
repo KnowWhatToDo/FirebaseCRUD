@@ -23,7 +23,7 @@ public class MENTEEController {
     @PostMapping("/addmentee")
     public String createMENTEE(@RequestBody mentee mentee)
             throws InterruptedException, ExecutionError, ExecutionException {
-        return menteeService.createMENTEE(mentee, mentee.getMentee_phone());
+        return menteeService.createMENTEE(mentee, mentee.getPhone());
     }
 
     @GetMapping("/getmentee")
@@ -35,7 +35,7 @@ public class MENTEEController {
     @PutMapping("/updatementee")
     public String updateMENTEE(@RequestBody mentee mentee)
             throws InterruptedException, ExecutionError, ExecutionException {
-        return menteeService.updateMENTEE(mentee, mentee.getMentee_phone());
+        return menteeService.updateMENTEE(mentee, mentee.getPhone());
     }
 
     @PutMapping("/deletementee")
