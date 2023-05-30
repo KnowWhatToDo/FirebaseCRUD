@@ -20,12 +20,13 @@ public class MentorService {
     Firestore dbFirestore = FirestoreClient.getFirestore();
 
     public String createMENTOR(mentor mentor, String phone) throws InterruptedException, ExecutionException {
-        
+
         ApiFuture<WriteResult> collectionsApiFuture = dbFirestore.collection("mentor_user").document(phone)
                 .set(mentor);
         return collectionsApiFuture.get().getUpdateTime().toString();
     }
 
+    // get mentor
     public mentor getMENTOR(String phone) throws InterruptedException, ExecutionException {
         DocumentReference documentReference = dbFirestore.collection("mentor_user").document(phone);
         ApiFuture<DocumentSnapshot> future = documentReference.get();
